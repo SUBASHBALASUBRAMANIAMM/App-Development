@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">List</string>
+    <string-array name="spinner">
+        <item>1 selected</item>
+        <item>2 selected</item>
+        <item>3 selected</item>
+        <item>4 selected</item>
+    </string-array>
+</resources>
