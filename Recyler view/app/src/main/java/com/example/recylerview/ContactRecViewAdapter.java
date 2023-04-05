@@ -13,8 +13,10 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import com.bumptech.glide.Glide;
 
+import java.time.Instant;
 import java.util.ArrayList;
 
 public class ContactRecViewAdapter extends RecyclerView.Adapter<ContactRecViewAdapter.ViewHolder> {
@@ -55,10 +57,12 @@ public class ContactRecViewAdapter extends RecyclerView.Adapter<ContactRecViewAd
                 Toast.makeText(context, contacts.get( holder.getAdapterPosition()).getName()+ " Selected", Toast.LENGTH_SHORT).show();
             }
         });
+
         Glide.with(context)
                 .asBitmap()
                 .load(contacts.get(position).getImageUrl())
                 .into(holder.image);
+
     }
 
     @Override

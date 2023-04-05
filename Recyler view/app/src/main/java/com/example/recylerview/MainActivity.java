@@ -6,11 +6,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
         private RecyclerView contactsRecView;
+        LinearLayout
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,8 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
         ContactRecViewAdapter adapter = new ContactRecViewAdapter(this);
         adapter.setContacts(contacts);
+
         contactsRecView.setAdapter(adapter);
-        contactsRecView.setLayoutManager(new GridLayoutManager(this,2));
+        contactsRecView.setLayoutManager(new GridLayoutManager(this));
 
 
     }

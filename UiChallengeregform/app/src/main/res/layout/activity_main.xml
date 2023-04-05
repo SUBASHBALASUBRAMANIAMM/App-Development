@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/parentLayout">
+
+    <LinearLayout
+        android:id="@+id/llprofile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:weightSum="10">
+
+        <ImageView
+            android:id="@+id/imgViewProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_weight="5"
+            android:src="@drawable/ic_launcher_background" />
+
+        <Button
+            android:id="@+id/btnPickImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="1"
+            android:text="PICK IMAGE" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llform"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llprofile"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/namePopup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter the name"
+            android:textColor="@color/red"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Name" />
+
+        <TextView
+            android:id="@+id/emailPopup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter the Email"
+            android:textColor="@color/red"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Email" />
+
+        <TextView
+            android:id="@+id/passwordPopup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter the Password"
+            android:textColor="@color/red"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:inputType="numberPassword"
+            android:hint="Password" />
+
+        <TextView
+            android:id="@+id/rePasswordPopup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Re-Enter your Password"
+            android:textColor="@color/red"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/editRePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:inputType="numberPassword"
+            android:hint="Re-Enter Password" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llform"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/genderTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender :"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/genderRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/genderTxtView"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/rbFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female" />
+
+            <RadioButton
+                android:id="@+id/rbOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/countryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/genderRadioGroup"
+            android:layout_marginTop="10dp"
+            android:text="Country :"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/countriesSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/genderRadioGroup"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:entries="@array/Countries" />
+
+        <TextView
+            android:id="@+id/licenseTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/countryTextView"
+            android:layout_marginTop="10dp"
+            android:text="The sample license agreement for a registration form"
+            android:textStyle="italic" />
+
+        <CheckBox
+            android:id="@+id/AgreeCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/licenseTextView"
+            android:layout_centerInParent="true"
+            android:text="I Agree" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/AgreeCheckBox"
+            android:layout_centerInParent="true"
+            android:text="Register" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

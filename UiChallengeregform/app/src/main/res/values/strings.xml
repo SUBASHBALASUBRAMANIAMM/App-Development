@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">UiChallenge reg form</string>
+    <array name="Countries">
+        <item>India</item>
+        <item>Bhutan</item>
+        <item>Nepal</item>
+        <item>Sri Lanka</item>
+        <item>Bangladesh</item>
+        <item>Europe</item>
+    </array>
+</resources>
