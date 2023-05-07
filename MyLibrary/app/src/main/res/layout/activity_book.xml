@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/topRelLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imgBookLogo"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_launcher_background" />
+
+                <Button
+                    android:id="@+id/btnCurrentlyReading"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@+id/imgBookLogo"
+                    android:backgroundTint="@color/teal_700"
+                    android:text="Currently Reading"
+                    android:textAllCaps="false" />
+
+
+
+                <Button
+                    android:id="@+id/btnAlreadyread"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnCurrentlyReading"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@+id/imgBookLogo"
+                    android:backgroundTint="@color/teal_700"
+                    android:text="Already Read"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btnAddToFavorites"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnAlreadyread"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@+id/imgBookLogo"
+                    android:backgroundTint="@color/teal_700"
+                    android:text="Add to Favorites"
+                    android:textAllCaps="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topRelLayout"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:id="@+id/bookNameLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Book Name :" />
+
+                    <TextView
+                        android:id="@+id/txtBookTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="The Mysterious" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/authorNameLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bookNameLL"
+                    android:layout_margin="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Author : " />
+
+                    <TextView
+                        android:id="@+id/txtAuthorTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Authors Name" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pagesLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/authorNameLL"
+                    android:layout_margin="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pages : " />
+
+                    <TextView
+                        android:id="@+id/txtPages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="200" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtDescriptionHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pagesLL"
+                    android:layout_margin="20dp"
+                    android:text="Description : " />
+
+                <TextView
+                    android:id="@+id/txtLongDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDescriptionHeading"
+                    android:layout_marginStart="30dp"
+                    android:text=" Long Description" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

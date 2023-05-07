@@ -1,0 +1,34 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Todo" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/teal_700</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">#F3F8F7</item>
+        <!-- Customize your theme here. -->
+        <item name="extendedFloatingActionButtonStyle">@style/Widget.App.ExtendedFloatingActionButton</item>
+        <item name="floatingActionButtonStyle">@style/Widget.App.FloatingActionButton</item>
+    </style>
+    <style name="Widget.App.ExtendedFloatingActionButton" parent="Widget.Material3.ExtendedFloatingActionButton.Icon.Primary">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.FloatingActionButton</item>
+    </style>
+
+    <style name="Widget.App.FloatingActionButton" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.FloatingActionButton</item>
+    </style>
+    <style name="ThemeOverlay.App.FloatingActionButton" parent="">
+        <item name="colorContainer">@color/purple_500</item>
+        <item name="colorOnContainer">@color/purple_700</item>
+    </style>
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+</resources>

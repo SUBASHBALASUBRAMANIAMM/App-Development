@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CurrentlyReadingActivity">
+    <TextView
+        android:id="@+id/labelCurrentlyReading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:background="@color/label"
+        android:text="Currently Reading"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/currentlyReadingRecyclerView"
+        android:padding="5dp"
+        android:layout_below="@+id/labelCurrentlyReading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
